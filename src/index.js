@@ -4,8 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-const pexel = (id) =>
-  `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`;
 const images = [
   // Front
   {
@@ -33,28 +31,28 @@ const images = [
   {
     position: [-2.15, 0, 1.5],
     rotation: [0, Math.PI / 2.5, 0],
-    url: pexel(325185),
+    url: "https://i.ibb.co/WH9sXJV/IMG-1032.png",
   },
   {
     position: [-2, 0, 2.75],
     rotation: [0, Math.PI / 2.5, 0],
-    url: pexel(358574),
+    url: "https://i.ibb.co/1JH5d0N/IMG-1484.png",
   },
   // Right
   {
     position: [1.75, 0, 0.25],
     rotation: [0, -Math.PI / 2.5, 0],
-    url: pexel(227675),
+    url: "https://i.ibb.co/vHthy8Y/21-F37-CFD-4-A2-A-42-B8-B2-DD-071-D15-E8-BB0-C.jpg",
   },
   {
     position: [2.15, 0, 1.5],
     rotation: [0, -Math.PI / 2.5, 0],
-    url: pexel(911738),
+    url: "https://i.ibb.co/LhxM3Jv/IMG-1490.jpg",
   },
   {
     position: [2, 0, 2.75],
     rotation: [0, -Math.PI / 2.5, 0],
-    url: pexel(1738986),
+    url: "https://i.ibb.co/1L343pb/13-D89-CB6-DD59-43-D8-B59-C-6-D9119893394.jpg    ",
   },
 ];
 
