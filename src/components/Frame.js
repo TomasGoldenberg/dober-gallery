@@ -6,7 +6,12 @@ import { useCursor, Image, Text } from "@react-three/drei";
 
 const GOLDENRATIO = 1.61803398875;
 
-const Frame = ({ url, c = new THREE.Color(), location, ...props }) => {
+const getPropertyByUrl = (images, currentNft, property) => {
+  const nft = images.find((item) => item.url === currentNft);
+  return nft[property] || "Dober Girl";
+};
+
+const Frame = ({ url, images, c = new THREE.Color(), location, ...props }) => {
   const [hovered, hover] = useState(false);
   // const [rnd] = useState(() => Math.random());
   const image = useRef();
@@ -70,7 +75,8 @@ const Frame = ({ url, c = new THREE.Color(), location, ...props }) => {
         position={[0.55, GOLDENRATIO, 0]}
         fontSize={0.025}
       >
-        DOBER GIRL
+        {getPropertyByUrl(images, url, "name")}{" "}
+        {getPropertyByUrl(images, url, "price")}ETH{" "}
       </Text>
     </group>
   );
