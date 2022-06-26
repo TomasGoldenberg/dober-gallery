@@ -32,12 +32,12 @@ const Frames = ({
   return (
     <group
       ref={ref}
-      onClick={(e) => (
-        e.stopPropagation(),
+      onClick={(e) => {
+        e.stopPropagation();
         setLocation(
           clicked.current === e.object ? "/" : "/item/" + e.object.name
-        )
-      )}
+        );
+      }}
       onPointerMissed={() => setLocation("/")}
     >
       {images.map(

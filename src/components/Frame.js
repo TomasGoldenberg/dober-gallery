@@ -8,7 +8,7 @@ const GOLDENRATIO = 1.61803398875;
 
 const Frame = ({ url, c = new THREE.Color(), location, ...props }) => {
   const [hovered, hover] = useState(false);
-  const [rnd] = useState(() => Math.random());
+  // const [rnd] = useState(() => Math.random());
   const image = useRef();
   const frame = useRef();
   const name = getUuid(url);
@@ -32,7 +32,10 @@ const Frame = ({ url, c = new THREE.Color(), location, ...props }) => {
     <group {...props}>
       <mesh
         name={name}
-        onPointerOver={(e) => (e.stopPropagation(), hover(true))}
+        onPointerOver={(e) => {
+          e.stopPropagation();
+          hover(true);
+        }}
         onPointerOut={() => hover(false)}
         scale={[1, GOLDENRATIO, 0.05]}
         position={[0, GOLDENRATIO / (!location.includes("item") ? 1 : 2), 0]}

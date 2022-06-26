@@ -2,8 +2,6 @@ import { Canvas } from "@react-three/fiber";
 import { MeshReflectorMaterial, Environment } from "@react-three/drei";
 import Frames from "./components/Frames";
 
-const GOLDENRATIO = 1.61803398875;
-
 export default function App({ images }) {
   return (
     <Canvas
