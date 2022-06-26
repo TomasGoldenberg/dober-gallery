@@ -41,7 +41,7 @@ const Frames = ({
       onPointerMissed={() => setLocation("/")}
     >
       {images.map(
-        (props) => <Frame location={location} key={props.url} {...props} /> /* prettier-ignore */
+        (props) => <Frame images={images} location={location} key={props.url} {...props} /> /* prettier-ignore */
       )}
     </group>
   );
